@@ -1,0 +1,13 @@
+table , th, td , tr{
+    border: 1px solid black;
+    border-collapse: collapse;
+}.even{
+    background-color:aqua;
+}
+.contenedorPrincipal{
+    display: flex;
+    flex-direction: column;
+    /* row-gap: 10px; */
+    align-items: center;
+    flex-wrap: wrap;
+}

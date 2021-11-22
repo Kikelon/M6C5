@@ -1,0 +1,15 @@
+<div class="contenedorPrincipal">
+    <mat-form-field appearance="fill">
+        <mat-label>id del disco</mat-label>
+        <input matInput #idDisco autocomplete="off" value="">
+    </mat-form-field>
+    <button mat-raised-button color="primary"
+        (click)="mostrarDisco(idDisco.value)">Buscar</button>
+    <ng-container *ngIf="this.disco.length>0">
+        <mat-list role="list">
+            <mat-list-item role="listitem">Título: {{ disco[0].titulo }}</mat-list-item>
+            <mat-list-item role="listitem">Intérprete: {{ disco[0].interprete }}</mat-list-item>
+            <mat-list-item role="listitem">Año de Publicación: {{ disco[0].anyoPublicacion }}</mat-list-item>
+        </mat-list>
+    </ng-container>
+</div>

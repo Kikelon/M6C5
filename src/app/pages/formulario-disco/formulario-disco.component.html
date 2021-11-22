@@ -1,0 +1,23 @@
+<div id="toma-datos">
+    <mat-form-field class="inputMaterial" appearance="fill">
+        <mat-label>id del disco</mat-label>
+        <input matInput #idDisco autocomplete="off" value="">
+    </mat-form-field>
+    <mat-form-field class="inputMaterial" appearance="fill">
+        <mat-label>Título del disco</mat-label>
+        <input matInput #tituloDisco autocomplete="off" value="">
+    </mat-form-field>
+    <mat-form-field class="inputMaterial" appearance="fill">
+        <mat-label>Intérprete del disco</mat-label>
+        <input matInput #interpreteDisco autocomplete="off" value="">
+    </mat-form-field>
+    <mat-form-field class="inputMaterial" appearance="fill">
+        <mat-label>Año de publicación</mat-label>
+        <input matInput #anyoPubicacionDisco autocomplete="off" value="">
+    </mat-form-field>
+    <div class="botonera">    
+        <button mat-raised-button (click)="addDisco(tituloDisco.value, interpreteDisco.value, anyoPubicacionDisco.value); idDisco.value = ''; tituloDisco.value = ''; interpreteDisco.value = ''; anyoPubicacionDisco.value = ''">Insertar</button>
+        <button mat-raised-button (click)="modDisco(idDisco.value, tituloDisco.value, interpreteDisco.value, anyoPubicacionDisco.value); idDisco.value = ''; tituloDisco.value = ''; interpreteDisco.value = ''; anyoPubicacionDisco.value = ''">Modificar</button>
+        <button mat-raised-button (click)="delDisco(idDisco.value); idDisco.value = ''; tituloDisco.value = ''; interpreteDisco.value = ''; anyoPubicacionDisco.value = ''">Borrar</button>
+    </div>
+</div>

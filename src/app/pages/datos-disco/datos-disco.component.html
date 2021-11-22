@@ -1,0 +1,29 @@
+<div class="contenedorPrincipal">
+    <ng-container *ngIf="discos.length>0; else isEmpty">
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Intérprete</th>
+                    <th scope="col">Año de publicación</th>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngFor="let disco of discos; let i = index; even as isEven;">
+                    <tr [ngClass]="{ 'even' : isEven }">
+                        <th scope="row">{{ disco.id }}</th>
+                        <td>{{ disco.titulo }}</td>
+                        <td>{{ disco.interprete }}</td>
+                        <td>{{ disco.anyoPublicacion }}</td>
+                    </tr>
+                </ng-container>
+            </tbody>
+        </table>
+    </ng-container>
+    <ng-template #isEmpty>
+        <div>
+            <h1>No hay discos que mostrar en la Base de Datos</h1>
+        </div>
+    </ng-template>
+</div>
