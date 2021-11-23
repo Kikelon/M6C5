@@ -13,8 +13,8 @@ export class FormularioDiscoComponent implements OnInit {
 
   // Atributos
 
-  public disco! : Disco;
-  public discos! : Disco[];
+  public disco : Disco;
+  public discos : Disco[];
 
   // Constructor
 

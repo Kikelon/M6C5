@@ -38,8 +38,8 @@ export class DiscosService {
   };
 
   // Metodo para borrar un dato de la tabla filtrado por id
-  public borrarDisco (id: number){
-    const httpOptions = {headers: null, body: {id : 5}}
+  public borrarDisco (index: number){
+    const httpOptions = {headers: null, body: {id : index}}
     return this.http.delete(this.url, httpOptions);    
   };
 }
